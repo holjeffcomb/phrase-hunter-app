@@ -8,14 +8,26 @@ class Phrase {
     }
 
     addPhraseToDisplay() {
+        const ul = document.querySelector('#phrase ul');
+        let className;
+        [...this.phrase].forEach(character => {
+            character === ' ' ? className = 'space' : className = `hide letter ${character}`;
+            const li = document.createElement('li');
+            li.className = className;
+            li.innerText = character;
+            ul.appendChild(li);
+        });
 
     }
 
-    checkLetter() {
-
+    checkLetter(letter) {
+        return this.phrase.includes(letter);
     }
 
-    showMatchedLetter() {
-        
+    showMatchedLetter(letter) {
+        const matched = document.querySelectorAll(`.${letter}`);
+        matched.forEach(match => {
+            match.className = `show letter ${letter}`;
+        });
     }
 }
