@@ -8,7 +8,7 @@ class Game {
         this.phrases = [
             new Phrase('home is where the heart is'),
             new Phrase('may the force be with you'),
-            new Phrase('keep your eyes on the prize'),
+            new Phrase('keep your eye on the prize'),
             new Phrase('the world is yours'),
             new Phrase('time heals all wounds')
         ]
