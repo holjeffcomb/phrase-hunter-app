@@ -9,12 +9,14 @@ class Phrase {
 
     addPhraseToDisplay() {
         let className;
+
+        // iterate through each letter in phrase and create li elements
         [...this.phrase].forEach(character => {
             character === ' ' ? className = 'space' : className = `hide letter ${character}`;
             const li = document.createElement('li');
             li.className = className;
             li.innerText = character;
-            ul.appendChild(li);
+            ul.appendChild(li); // append li to ul element
         });
 
     }
@@ -23,9 +25,9 @@ class Phrase {
         return this.phrase.includes(letter);
     }
 
+    // iterate through phrase li elements and change class name
     showMatchedLetter(letter) {
-        const matched = document.querySelectorAll(`.${letter}`);
-        matched.forEach(match => {
+        document.querySelectorAll(`.${letter}`).forEach(match => {
             match.className = `show letter ${letter}`;
         });
     }
