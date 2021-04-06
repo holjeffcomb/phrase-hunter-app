@@ -8,7 +8,6 @@ class Phrase {
     }
 
     addPhraseToDisplay() {
-        const ul = document.querySelector('#phrase ul');
         let className;
         [...this.phrase].forEach(character => {
             character === ' ' ? className = 'space' : className = `hide letter ${character}`;
