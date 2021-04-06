@@ -30,7 +30,7 @@ document.addEventListener('keyup', (e) => {
                 thisButton = button;
             }
         });
-        if (!thisButton.disabled) {
+        if (!thisButton.disabled) { // will only send to handleInteraction method if button key isn't disabled
             game.handleInteraction(e.key);
         }
     } catch (e) {} // will do nothing if key pressed is not a letter button
